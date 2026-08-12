@@ -30,9 +30,6 @@
     font-family:'Museo Sans 500', sans-serif;
     line-height:1.65;
     -webkit-font-smoothing:antialiased;
-    overflow-x:hidden;
-    max-width:100%;
-    position:relative;
   }
   p{
     text-align:justify;
@@ -72,7 +69,7 @@
   .headwrap .brandlock{flex-direction:row; align-items:center; gap:14px;}
   .headwrap .brandlock .bl-text{text-align:left;}
   .headwrap .brandlock .bl-name{font-size:23.4px;}
-  .brandlock img{height:70.2px; width:auto; display:block; flex-shrink:0;}
+  .brandlock img{height:59.67px; width:auto; display:block; flex-shrink:0;}
   .brandlock .bl-text{display:flex; flex-direction:column; line-height:1.25; text-align:center;}
   .brandlock .bl-name{font-family:'Museo Sans 500', sans-serif; font-weight:600; font-size:15px; color:var(--navy-900); white-space:nowrap;}
   .brandlock .bl-tag{font-family:'Museo Sans 500', sans-serif; font-weight:600; font-size:10px; letter-spacing:0.09em; text-transform:uppercase; color:var(--gold-500); margin-top:4px; white-space:nowrap;}
@@ -233,7 +230,7 @@
   .bg-navy .section-head p{color:rgba(246,243,234,0.78);}
   .bg-panel{background:var(--ivory-100);}
 
-  .prose p{color:var(--ink-600); font-size:16.5px; margin:0 0 20px; max-width:760px;}
+  .prose p{color:var(--ink-600); font-size:16.5px; margin:0 0 20px; max-width:none;}
   .prose p:last-child{margin-bottom:0;}
 
   .grid-3{display:grid; grid-template-columns:repeat(3,1fr); gap:24px;}
