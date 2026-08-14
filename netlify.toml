@@ -1,0 +1,15 @@
+# Netlify build settings.
+# Every time a post is published, edited, or deleted through /admin (or a
+# file is changed directly in the content/ folder), Netlify runs the command
+# below before publishing the site. It regenerates resurse.html, en/resurse.html,
+# and one HTML page per article — nothing else on the site is touched.
+
+[build]
+  command = "node tools/build-blog.js"
+  publish = "."
+
+# Keep the CMS admin panel and the raw content/tools folders out of search engines.
+[[headers]]
+  for = "/admin/*"
+  [headers.values]
+    X-Robots-Tag = "noindex"

@@ -1,0 +1,46 @@
+backend:
+  name: git-gateway
+  branch: main
+
+# Where uploaded images from posts are stored, and how the site links to them
+media_folder: "assets/blog-uploads"
+public_folder: "/assets/blog-uploads"
+
+# Shows a live-ish preview list; editors don't need to know any code
+publish_mode: simple
+show_preview_links: true
+
+collections:
+  - name: "posts_ro"
+    label: "Articole (Română)"
+    folder: "content/posts-ro"
+    create: true
+    delete: true
+    slug: "{{fields.slug}}"
+    extension: "md"
+    format: "frontmatter"
+    summary: "{{title}}"
+    fields:
+      - { label: "Titlu", name: "title", widget: "string", hint: "Titlul mare al articolului." }
+      - { label: "Adresă pagină (slug)", name: "slug", widget: "string", hint: "Doar litere mici, cifre și cratime, fără spații — ex: ghid-contracte-2026. Aceasta devine adresa paginii." }
+      - { label: "Rezumat scurt", name: "excerpt", widget: "text", hint: "1-2 propoziții — apar pe cardul din pagina Resurse." }
+      - { label: "Data publicării", name: "date", widget: "datetime" }
+      - { label: "Citat / subtitlu evidențiat (opțional)", name: "lead", widget: "string", required: false, hint: "Apare cu accent, sub titlu — lăsați gol dacă nu doriți." }
+      - { label: "Conținut articol", name: "body", widget: "markdown", hint: "Folosiți titlurile (##) pentru secțiuni și listele numerotate pentru puncte cheie." }
+
+  - name: "posts_en"
+    label: "Articles (English)"
+    folder: "content/posts-en"
+    create: true
+    delete: true
+    slug: "{{fields.slug}}"
+    extension: "md"
+    format: "frontmatter"
+    summary: "{{title}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string", hint: "The main article headline." }
+      - { label: "Page address (slug)", name: "slug", widget: "string", hint: "Lowercase letters, numbers and hyphens only, no spaces — e.g. contracts-guide-2026. This becomes the page URL." }
+      - { label: "Short excerpt", name: "excerpt", widget: "text", hint: "1-2 sentences — shown on the card on the Resources page." }
+      - { label: "Publish date", name: "date", widget: "datetime" }
+      - { label: "Highlighted quote / subtitle (optional)", name: "lead", widget: "string", required: false, hint: "Shown emphasized under the title — leave blank if not needed." }
+      - { label: "Article content", name: "body", widget: "markdown", hint: "Use headings (##) for sections and numbered lists for key points." }
